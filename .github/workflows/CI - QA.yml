@@ -30,7 +30,7 @@ jobs:
         with:
           repository: Aaron-CHM/SimpCity-QA
           path: tests
-          token: ${{ secrets.QA_REMOTE }}
+          token: ${{ secrets.YUMIN_KEY }}
       - name: Linter Check with Flake8
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
@@ -47,7 +47,7 @@ jobs:
         uses: nashmaniac/create-issue-action@v1.1
         with:
           title: Build Failed
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.YUMIN_KEY}}
           assignees: ${{github.actor}}
           labels: workflow-failed
           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}
@@ -62,5 +62,5 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1.24
         if: always()
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.YUMIN_KEY }}
           files: report.xml
