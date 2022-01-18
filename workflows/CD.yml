@@ -1,0 +1,31 @@
+# name: CI using QA's Tests
+
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - if: ${} #has tag
+#         name: Deploy
+#         uses: nashmaniac/create-issue-action@v1.1
+#         with:
+#           title: Build Failed
+#           token: ${{secrets.GITHUB_TOKEN}}
+#           assignees: ${{github.actor}}
+#           labels: workflow-failed
+#           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}
+
+#       - if: ${} #has tag
+#         name: Send Email
+#         uses: nashmaniac/create-issue-action@v1.1
+#         with:
+#           title: Build Failed
+#           token: ${{secrets.GITHUB_TOKEN}}
+#           assignees: ${{github.actor}}
+#           labels: workflow-failed
+#           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}
