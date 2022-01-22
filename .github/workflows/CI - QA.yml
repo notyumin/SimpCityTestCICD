@@ -23,7 +23,7 @@ jobs:
       - name: Checkout Own Repo to cloud
         uses: actions/checkout@v2
         with:
-          repository: notyumin/SimpCity
+          repository: notyumin/SimpCityTestCICD
 
       - name: Checkout private repo remotely
         uses: actions/checkout@v2
