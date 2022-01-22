@@ -41,8 +41,7 @@ jobs:
           ls
           mv ./tests/*.* ./
           echo "Files have been moved"
-          ls
-          cat test_simpyCity.py
+          cat test_simpCity.py
           pytest --cov -v --junitxml=report.xml
 
       - if: ${{failure()}}
