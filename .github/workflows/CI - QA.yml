@@ -40,6 +40,7 @@ jobs:
         run: |
           ls
           mv ./tests/*.* ./
+          cat ./test_simpyCity.py
           pytest --cov -v --junitxml=report.xml
 
       - if: ${{failure()}}
