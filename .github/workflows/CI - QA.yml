@@ -41,6 +41,9 @@ jobs:
           ls
           mv ./tests/*.* ./
           echo "Files have been moved"
+          echo "main code:"
+          cat simpCity.py
+          echo "test code:"
           cat test_simpCity.py
           pytest --cov -v --junitxml=report.xml
 
