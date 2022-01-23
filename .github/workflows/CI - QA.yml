@@ -40,13 +40,9 @@ jobs:
         run: |
           ls
           mv ./tests/*.* ./
-          echo "Files have been moved"
-          echo "main code:"
-          cat simpCity.py
-          printf "\ntest code:"
-          cat test_simpCity.py
           pytest --cov -v --junitxml=report.xml
-
+          echo "check for report.xml:"
+          ls
       - if: ${{failure()}}
         name: Create Issues
         uses: nashmaniac/create-issue-action@v1.1
