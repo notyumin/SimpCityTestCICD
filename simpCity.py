@@ -59,7 +59,7 @@ def main():
             load_game()
 
         elif option == 0:
-            print("Bye! ")
+            print("Bye!")
             exit()
 
 
