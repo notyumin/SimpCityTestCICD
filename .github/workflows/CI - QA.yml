@@ -63,5 +63,5 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1.27
         if: always()
         with:
-          github_token: ${{ secrets.YUMIN_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           files: report.xml
