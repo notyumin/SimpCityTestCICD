@@ -1,4 +1,4 @@
-name: CI using QA's Tests
+name: CD on tag
 
 on:
   push:
