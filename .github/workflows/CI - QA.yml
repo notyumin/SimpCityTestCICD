@@ -45,7 +45,6 @@ jobs:
       - name: Begin Pytest
         run: |
           ls
-          rm test_simpCity.py
           mv ./tests/*.* ./
           pytest --cov -v --junitxml=report.xml
       - if: ${{failure()}}
