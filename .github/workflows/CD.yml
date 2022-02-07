@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      COVERAGE_SINGLE: 20 #change back to 80
-      COVERAGE_TOTAL: 20 #change back to 80
+      COVERAGE_SINGLE: 80
+      COVERAGE_TOTAL: 80
 
     steps:
       - uses: actions/checkout@v2
